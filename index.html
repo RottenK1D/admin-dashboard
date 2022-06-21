@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />\
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Admin-Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="sidebar">
+        <div class="logo">
+          <svg class="nft-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+            <desc>Created with Fabric.js 1.7.22</desc>
+            <defs>
+            </defs>
+            <g transform="translate(128 128) scale(0.72 0.72)" style="">
+              <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)" >
+              <path d="M 44.994 0 L 5.969 22.631 v 44.847 L 45.06 90 l 38.971 -22.533 V 22.62 L 44.994 0 z M 29.461 71.022 l -3.5 -2.013 l -7.219 -27.062 v 22.906 l -4.113 -2.363 V 29.5 l 4.113 -2.319 c 0 0.308 3.997 13.225 5.732 18.816 l 0.044 -23.191 l 4.944 -2.713 V 71.022 z M 55.582 42.101 v 5.732 H 38.299 v 28.439 l -4.638 -3.063 V 16.856 l 11.344 -6.782 l 14.339 8.401 l -2.669 4.156 l -11.67 -6.782 l -6.706 3.807 v 22.445 H 55.582 z M 76.714 35.101 l -6.344 -4.332 v 35.615 l -5.119 2.844 V 27.969 l -6.169 -4.025 l 2.538 -3.807 l 15.095 9.538 V 35.101 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+            </g>
+            </svg>     
+        </div>
+        <div class="menu"> 
+            <div class="side-content"><svg class="svg-home-btn" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M7.7 42.3V17.85L24.1 5.6L40.3 17.85V42.3H28V28.05H19.95V42.3ZM11.1 38.9H16.55V24.65H31.4V38.9H36.9V19.55L24.1 9.9L11.1 19.55ZM24 24.35Z"/></svg></div>
+            <div class="side-content"><svg class="svg-cloud-btn" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M12.55 40.3Q8.05 40.3 4.875 37.15Q1.7 34 1.7 29.45Q1.7 25.5 4.225 22.45Q6.75 19.4 10.65 18.8Q11.7 13.9 15.45 10.825Q19.2 7.75 24.1 7.75Q29.75 7.75 33.65 11.825Q37.55 15.9 37.65 21.65V22.85Q41.3 22.85 43.8 25.35Q46.3 27.85 46.3 31.55Q46.3 35.15 43.725 37.725Q41.15 40.3 37.55 40.3ZM12.55 36.9H37.55Q39.7 36.9 41.275 35.325Q42.85 33.75 42.85 31.55Q42.85 29.35 41.275 27.775Q39.7 26.2 37.55 26.2H34.25V21.9Q34.25 17.4 31.25 14.275Q28.25 11.15 23.9 11.15Q19.55 11.15 16.525 14.3Q13.5 17.45 13.5 22H12.4Q9.35 22 7.25 24.15Q5.15 26.3 5.15 29.45Q5.15 32.55 7.3 34.725Q9.45 36.9 12.55 36.9ZM24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Z"/></svg></div>
+            <div class="side-content"><svg class="svg-wallet-btn" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M32.6 27.2Q33.85 27.2 34.825 26.225Q35.8 25.25 35.8 23.95Q35.8 22.7 34.825 21.75Q33.85 20.8 32.6 20.8Q31.35 20.8 30.375 21.75Q29.4 22.7 29.4 23.95Q29.4 25.25 30.375 26.225Q31.35 27.2 32.6 27.2ZM9.1 36.25Q9.1 36.25 9.1 37.575Q9.1 38.9 9.1 38.9Q9.1 38.9 9.1 38.9Q9.1 38.9 9.1 38.9V9.1Q9.1 9.1 9.1 9.1Q9.1 9.1 9.1 9.1Q9.1 9.1 9.1 10.45Q9.1 11.8 9.1 11.8Q9.1 11.8 9.1 13.675Q9.1 15.55 9.1 18.35V29.7Q9.1 32.5 9.1 34.375Q9.1 36.25 9.1 36.25ZM9.1 42.3Q7.8 42.3 6.75 41.275Q5.7 40.25 5.7 38.9V9.1Q5.7 7.75 6.75 6.725Q7.8 5.7 9.1 5.7H38.9Q40.3 5.7 41.3 6.725Q42.3 7.75 42.3 9.1V15.7H38.9V9.1Q38.9 9.1 38.9 9.1Q38.9 9.1 38.9 9.1H9.1Q9.1 9.1 9.1 9.1Q9.1 9.1 9.1 9.1V38.9Q9.1 38.9 9.1 38.9Q9.1 38.9 9.1 38.9H38.9Q38.9 38.9 38.9 38.9Q38.9 38.9 38.9 38.9V32.35H42.3V38.9Q42.3 40.25 41.3 41.275Q40.3 42.3 38.9 42.3ZM26.9 33.35Q25.25 33.35 24.225 32.35Q23.2 31.35 23.2 29.7V18.35Q23.2 16.7 24.225 15.7Q25.25 14.7 26.9 14.7H40.7Q42.4 14.7 43.4 15.7Q44.4 16.7 44.4 18.35V29.7Q44.4 31.35 43.4 32.35Q42.4 33.35 40.7 33.35ZM41.4 30.35Q41.4 30.35 41.4 30.35Q41.4 30.35 41.4 30.35V17.7Q41.4 17.7 41.4 17.7Q41.4 17.7 41.4 17.7H26.2Q26.2 17.7 26.2 17.7Q26.2 17.7 26.2 17.7V30.35Q26.2 30.35 26.2 30.35Q26.2 30.35 26.2 30.35Z"/></svg></div>
+            <div class="side-content"><svg class="svg-chart-btn" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M7.8 40.2V17.8H15.2V40.2ZM20.3 40.2V7.8H27.7V40.2ZM32.8 40.2V25.8H40.2V40.2Z"/></svg></div>
+            <div class="side-content"><svg class="svg-setting-btn" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M19.15 44.3 18.1 37.9Q17.25 37.6 16.25 37.025Q15.25 36.45 14.5 35.85L8.55 38.6L3.6 29.9L9.1 25.9Q9 25.5 8.975 24.95Q8.95 24.4 8.95 24Q8.95 23.6 8.975 23.05Q9 22.5 9.1 22.1L3.6 18.1L8.55 9.4L14.55 12.15Q15.25 11.55 16.25 11Q17.25 10.45 18.1 10.15L19.15 3.7H28.85L29.9 10.1Q30.75 10.45 31.775 10.975Q32.8 11.5 33.5 12.15L39.5 9.4L44.4 18.1L38.9 22Q39 22.45 39.025 23Q39.05 23.55 39.05 24Q39.05 24.45 39.025 24.975Q39 25.5 38.9 25.95L44.4 29.9L39.45 38.6L33.45 35.85Q32.75 36.45 31.775 37.05Q30.8 37.65 29.9 37.9L28.85 44.3ZM24 30.5Q26.7 30.5 28.6 28.6Q30.5 26.7 30.5 24Q30.5 21.3 28.6 19.4Q26.7 17.5 24 17.5Q21.3 17.5 19.4 19.4Q17.5 21.3 17.5 24Q17.5 26.7 19.4 28.6Q21.3 30.5 24 30.5ZM24 27.5Q22.5 27.5 21.5 26.475Q20.5 25.45 20.5 24Q20.5 22.55 21.5 21.525Q22.5 20.5 24 20.5Q25.45 20.5 26.475 21.525Q27.5 22.55 27.5 24Q27.5 25.45 26.475 26.475Q25.45 27.5 24 27.5ZM24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24ZM21.9 40.9H26.1L26.8 35.3Q28.45 34.9 29.95 34.05Q31.45 33.2 32.65 31.95L37.95 34.25L39.85 30.8L35.15 27.4Q35.35 26.55 35.5 25.7Q35.65 24.85 35.65 24Q35.65 23.15 35.525 22.3Q35.4 21.45 35.15 20.6L39.85 17.2L37.95 13.75L32.65 16.05Q31.5 14.7 30.025 13.8Q28.55 12.9 26.8 12.7L26.1 7.1H21.9L21.2 12.7Q19.5 13 18 13.875Q16.5 14.75 15.3 16.05L10.05 13.75L8.15 17.2L12.8 20.6Q12.6 21.45 12.475 22.3Q12.35 23.15 12.35 24Q12.35 24.85 12.475 25.7Q12.6 26.55 12.8 27.4L8.15 30.8L10.05 34.25L15.3 31.95Q16.55 33.2 18.05 34.05Q19.55 34.9 21.2 35.3Z"/></svg></div>
+        </div> 
+        <div class="profile">
+          <img src="img/boredape.png" alt="profile" class="profile-img">
+        </div>
+      </div>
+      
+      <div class="main">
+        <div class="card">
+          <span>Artwork & Photography</span>
+          <h1 class="card-title">SUPER RARE POOP IT NFT's</h1>
+          <div class="card-btn">
+            <button class="btn1 hvr-sweep-to-right" >Explore</button>
+            <button class="btn2 hvr-sweep-to-right"><svg class="svg-play-btn" xmlns="http://www.w3.org/2000/svg" height="20" width="20"><path d="M6.833 15.583V4.375L15.625 9.979Z"/></svg></button>
+          </div>
+        </div>
+        <div class="wallpaper">
+          <div class="slider">
+            <div class="wallpaper-slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+             
+             <div class="slide-img first">
+                <img src="img/89dc8ab9efe0144f210bf44adcbb7dcd.png" alt="">
+             </div>
+             <div class="slide-img">
+                <img src="img/b17586dab5c0100bcec70d52ecb571a9.png" alt="">
+             </div>
+             <div class="slide-img">
+                <img src="img/fc926ec58ee803b6ce528f3b3d962d3c.png" alt="">
+             </div>
+             <div class="slide-img">
+                <img src="img/600ed31a741f266f313d4ca485922a17.png" alt="">
+             </div>
+
+             <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+             </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+          <div class="tokens">
+            <div class="token">
+              <img src="img/NeoTokyo.avif" alt="">
+              <p>NEO TOKYO</p>
+                <div class="likes">
+                  <div class="heart"></div>
+                  <div class="likes-count">55</div>
+                </div>  
+            </div>
+            <div class="token">
+              <img src="img/cryptopunk.png" alt="">
+              <p>Crypto Punk</p>
+                <div class="likes">
+                  <div class="heart"></div>
+                  <div class="likes-count">55</div>
+                </div> 
+            </div>
+            <div class="token">
+              <img src="img/Tokyopunk.png" alt="">
+              <p>Tokyo Punks</p>
+                <div class="likes">
+                  <div class="heart" onclick="addLike(this)"></div>
+                  <div class="likes-count" >55</div>
+                </div> 
+            </div>
+          </div>
+          <div class="stats">
+            <p>Live stats</p>
+            <div class="live-stats">
+              <div class="crypto-logo"><img src="img/ethereum-eth-logo-animated.gif" alt=""></div>
+              <div class="chart">
+                  <ul class="bars">
+                    <li><div class="bar" data-percentage="26"><span>M</span></div></li>
+                    <li><div class="bar" data-percentage="61"><span>T</span></div></li>
+                    <li><div class="bar" data-percentage="47"><span>W</span></div></li>
+                    <li><div class="bar" data-percentage="10"><span>T</span></div></li>
+                    <li><div class="bar" data-percentage="64"><span>F</span></div></li>
+                    <li><div class="bar" data-percentage="88"><span>S</span></div></li>
+                    <li><div class="bar" data-percentage="70"><span>S</span></div></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <script>
+      $(function(){
+        $('.bars li .bar').each(function(key, bar){
+          let percentage = $(this).data('percentage');
+          $(this).animate({
+            'height':percentage
+          }, 1000)
+        });
+      })
+
+      $(function() {
+        $(".heart").on("click", function() {
+          $(this).toggleClass("is-active");
+          });
+      });
+
+      function addLike(e){
+        let count = Number(e.nextElementSibling.innerText) + 1;
+        e.nextElementSibling.innerText = count;
+      }
+    </script>
+  </body>
+</html>
+
